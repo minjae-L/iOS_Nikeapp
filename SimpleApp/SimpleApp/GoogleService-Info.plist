@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>689462099254-c8ae5n82om557dl1mlg560e947mc0hec.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.689462099254-c8ae5n82om557dl1mlg560e947mc0hec</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBDDm4ghTGlUn2JxCGGO1fJZQT5f9fvICM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>689462099254</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>minjae.SimpleApp</string>
+	<key>PROJECT_ID</key>
+	<string>iospictureapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>iospictureapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:689462099254:ios:f540601e9c16b07e598797</string>
+	<key>DATABASE_URL</key>
+	<string>https://iospictureapp.firebaseio.com</string>
+</dict>
+</plist>
