@@ -6,7 +6,7 @@
 //  Copyright © 2020 이민재. All rights reserved.
 //
 
-import UIKit
+import UIKit    
 
 class ViewController: UIViewController {
 
