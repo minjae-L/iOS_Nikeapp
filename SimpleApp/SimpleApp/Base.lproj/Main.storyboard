@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i39-fL-Fa5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="elG-3w-Cdd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="vf3-vE-qvd">
             <objects>
-                <viewController id="elG-3w-Cdd" customClass="ViewController" customModule="SimpleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="elG-3w-Cdd" customClass="LoginViewController" customModule="SimpleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fTh-Al-2IG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,6 +132,9 @@
                                         <state key="normal" title="회원가입">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goSignUpView:" destination="elG-3w-Cdd" eventType="touchUpInside" id="uMS-VQ-rZ8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -172,15 +175,15 @@
             </objects>
             <point key="canvasLocation" x="225" y="172"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="A6r-WX-CjP">
             <objects>
-                <viewController id="i39-fL-Fa5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUpView" id="i39-fL-Fa5" customClass="SignUpViewController" customModule="SimpleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BX6-MU-qHg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWQ-yQ-EIz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWQ-yQ-EIz" userLabel="나이키 멤버 가입">
                                 <rect key="frame" x="0.0" y="44" width="414" height="82.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이키 멤버 가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx5-Fv-mud">
@@ -198,7 +201,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Bx5-Fv-mud" secondAttribute="bottom" id="nHF-aY-ro1"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fk-xj-PgD">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fk-xj-PgD" userLabel="부가설명">
                                 <rect key="frame" x="0.0" y="146.5" width="414" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멤버가 되어 나이키가 제공하는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtL-4z-34e">
@@ -232,8 +235,8 @@
                                     <constraint firstAttribute="trailing" secondItem="3wT-u1-tW9" secondAttribute="trailing" id="xMh-ap-xUl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiY-3p-z5K">
-                                <rect key="frame" x="0.0" y="392" width="414" height="410"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiY-3p-z5K" userLabel="인적사항 입력 뷰">
+                                <rect key="frame" x="0.0" y="237.5" width="414" height="410"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 사용하실 ID를 입력해주세요. (수신 가능 E-mail)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6m-Wg-fLD">
                                         <rect key="frame" x="20" y="10" width="374" height="40"/>
@@ -356,7 +359,7 @@
                                     <constraint firstItem="p6m-Wg-fLD" firstAttribute="leading" secondItem="NiY-3p-z5K" secondAttribute="leading" constant="20" id="uVA-Bt-NHZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="la9-Li-oDS">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="la9-Li-oDS" userLabel="회원가입 버튼 뷰">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMR-mu-vLv">
@@ -369,6 +372,9 @@
                                         <state key="normal" title="회원가입 (만 14세 이상)">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpBtn:" destination="i39-fL-Fa5" eventType="touchUpInside" id="lSA-TB-rSt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -383,8 +389,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8Fk-xj-PgD" firstAttribute="top" secondItem="cWQ-yQ-EIz" secondAttribute="bottom" constant="20" id="4k2-kG-NGW"/>
+                            <constraint firstItem="NiY-3p-z5K" firstAttribute="top" secondItem="8Fk-xj-PgD" secondAttribute="bottom" constant="40" id="5Y7-Nu-aOp"/>
                             <constraint firstItem="cWQ-yQ-EIz" firstAttribute="top" secondItem="Kay-H5-ehw" secondAttribute="top" id="AO1-SY-cmd"/>
-                            <constraint firstItem="la9-Li-oDS" firstAttribute="top" secondItem="NiY-3p-z5K" secondAttribute="bottom" id="AlR-3C-ltw"/>
                             <constraint firstItem="cWQ-yQ-EIz" firstAttribute="leading" secondItem="Kay-H5-ehw" secondAttribute="leading" id="CTs-IU-pUY"/>
                             <constraint firstItem="Kay-H5-ehw" firstAttribute="bottom" secondItem="la9-Li-oDS" secondAttribute="bottom" id="Psm-Jh-9IF"/>
                             <constraint firstItem="NiY-3p-z5K" firstAttribute="leading" secondItem="Kay-H5-ehw" secondAttribute="leading" id="c7D-vw-krk"/>
@@ -397,6 +403,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kay-H5-ehw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="y5P-QA-NO0"/>
+                    <connections>
+                        <outlet property="alertEmailMsg" destination="oTY-sD-EnU" id="QSa-vR-xf0"/>
+                        <outlet property="alertPnumMsg" destination="A3i-jQ-ijl" id="my1-Jz-K8O"/>
+                        <outlet property="alertPwdMsg" destination="Rpj-x8-CkP" id="vVZ-Zg-dIq"/>
+                        <outlet property="alertRepeatPwdMsg" destination="x81-qF-laD" id="Kg5-Vz-HYK"/>
+                        <outlet property="alertUsernameMsg" destination="Zh4-AH-gQp" id="pet-ql-8hf"/>
+                        <outlet property="emailField" destination="p6m-Wg-fLD" id="nwh-oi-rTJ"/>
+                        <outlet property="passwordField" destination="mDg-kr-sUe" id="KLc-5y-1o9"/>
+                        <outlet property="repeatPasswordField" destination="Mgd-2a-gyb" id="iZB-uh-qAB"/>
+                        <outlet property="userPhoneNumberField" destination="ooI-7N-WuV" id="E9t-un-pl0"/>
+                        <outlet property="usernameField" destination="xFc-fj-ypd" id="C9q-kB-xOO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qo7-4s-nWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
