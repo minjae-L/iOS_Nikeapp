@@ -25,18 +25,27 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if user != nil {
                 print("login success")
+                let vc: UIViewController = self.storyboard!.instantiateViewController(identifier: "mainVC")
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true, completion: nil)
             } else {
                 print("login failed")
+                self.presentSignInFailed()
             }
         }
     }
-    
+    func presentSignInFailed() {
+        let alert = UIAlertController(title: "로그인 실패", message: "아이디와 비밀번호가 일치하지 않습니다.", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "확인", style: .default){
+            (action: UIAlertAction) -> Void in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = Auth.auth().currentUser {
-            print("로그인중")
-        }
         // Do any additional setup after loading the view.
     }
 

@@ -22,12 +22,27 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var alertUsernameMsg: UILabel!
     @IBOutlet weak var alertPnumMsg: UILabel!
     
-    func hideAlertMsg () {
+    var okEmail : Bool?
+    var okPassword : Bool?
+    var okRepeatPassword : Bool?
+    var okUsername : Bool?
+    var okPhoneNum : Bool?
+    
+    let db = Firestore.firestore()
+    var ref: DocumentReference? = nil
+    
+    func settings () {
         alertEmailMsg.isHidden = true
         alertPwdMsg.isHidden = true
         alertRepeatPwdMsg.isHidden = true
         alertUsernameMsg.isHidden = true
         alertPnumMsg.isHidden = true
+        
+        okEmail = false
+        okPassword = false
+        okRepeatPassword = false
+        okUsername = false
+        okPhoneNum = false
     }
 //    MARK: - 정규식 이용하여 회원가입 조건 적용 함수들
     
@@ -46,6 +61,7 @@ class SignUpViewController: UIViewController {
             alertEmailMsg.text = "이메일을 형식에 맞게 작성해주세요."
         } else {
             alertEmailMsg.isHidden = true
+            okEmail = true
         }
     }
     
@@ -64,6 +80,7 @@ class SignUpViewController: UIViewController {
             alertPwdMsg.text = "비밀번호 형식에 맞게 입력해주세요."
         } else {
             alertPwdMsg.isHidden = true
+            okPassword = true
         }
     }
     
@@ -74,6 +91,7 @@ class SignUpViewController: UIViewController {
                 alertRepeatPwdMsg.text = "비밀번호를 다시 확인해주세요."
             } else {
                 alertRepeatPwdMsg.isHidden = true
+                okRepeatPassword = true
             }
         }
     }
@@ -97,6 +115,7 @@ class SignUpViewController: UIViewController {
             alertUsernameMsg.text = "정확히 한글로 입력해주세요."
         } else {
             alertUsernameMsg.isHidden = true
+            okUsername = true
         }
     }
     
@@ -116,6 +135,7 @@ class SignUpViewController: UIViewController {
             alertPnumMsg.text = "정확히 숫자로 입력해주세요.(- 없이)"
         } else {
             alertPnumMsg.isHidden = true
+            okPhoneNum = true
         }
     }
     
@@ -125,7 +145,36 @@ class SignUpViewController: UIViewController {
         self.isSamePassword()
         self.checkName()
         self.checkPnum()
-//        self.presentSignUpAlert()
+        if okEmail == true &&
+            okPassword == true &&
+            okRepeatPassword == true &&
+            okUsername == true &&
+            okPhoneNum == true {
+            singUp(email: emailField.text!, password: passwordField.text!)
+        }
+
+    }
+    func singUp(email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password)
+        { (user, error) in
+            if user != nil {
+                print("register success")
+                self.presentSignUpAlert()
+                self.db.collection("account").addDocument(data: [
+                    "email": self.emailField.text!,
+                    "username": self.usernameField.text!,
+                    "phoneNum": self.userPhoneNumberField.text!
+                ]) { err in
+                    if let err = err {
+                        print("Error")
+                    } else {
+                        print("add")
+                    }
+                }
+            } else {
+                print("register failed")
+            }
+        }
     }
     
     func moveToLoginView() {
@@ -144,7 +193,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideAlertMsg ()
+        settings()
         // Do any additional setup after loading the view.
     }
     
