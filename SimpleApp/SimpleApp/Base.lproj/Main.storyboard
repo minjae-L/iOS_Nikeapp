@@ -113,6 +113,9 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="로그인"/>
+                                <connections>
+                                    <action selector="loginBtn:" destination="elG-3w-Cdd" eventType="touchUpInside" id="Maa-aV-pbT"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-bV-ets">
                                 <rect key="frame" x="0.0" y="782" width="414" height="50"/>
@@ -170,10 +173,38 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7OK-g6-mhc"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="F5D-SF-yxZ" id="5PI-rr-kZi"/>
+                        <outlet property="passwordTextField" destination="Jej-TF-Fce" id="QYb-09-0Vj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lT-8b-v2f" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="225" y="172"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="vAW-5p-drD">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="UxQ-dE-XlX" customClass="MainViewController" customModule="SimpleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZq-RD-6Zn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deK-nc-98U">
+                                <rect key="frame" x="186" y="278" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MBI-zj-YGr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVl-8U-GRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="173"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="A6r-WX-CjP">

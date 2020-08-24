@@ -10,6 +10,7 @@
 		164B9F2D43AC155C4B08436B /* Pods_SimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B422B308BB636FFB10986263 /* Pods_SimpleApp.framework */; };
 		7581B2036D770850431E2C98 /* Pods_SimpleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25772ED44C618CBF70936D0 /* Pods_SimpleAppTests.framework */; };
 		9E9222ADE6F792CA8576573F /* Pods_SimpleApp_SimpleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885277CA1E40C5A795E1E447 /* Pods_SimpleApp_SimpleAppUITests.framework */; };
+		B52E63B824F2536D009099B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E63B724F2536D009099B9 /* MainViewController.swift */; };
 		B5BC97A124A9805B002D01B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC97A024A9805B002D01B9 /* AppDelegate.swift */; };
 		B5BC97A324A9805B002D01B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC97A224A9805B002D01B9 /* SceneDelegate.swift */; };
 		B5BC97A524A9805B002D01B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC97A424A9805B002D01B9 /* LoginViewController.swift */; };
@@ -48,6 +49,7 @@
 		8DE39A1D6BCA1445297D0E99 /* Pods-SimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F72F5786FA1178521FA572 /* Pods-SimpleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleAppTests/Pods-SimpleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B422B308BB636FFB10986263 /* Pods_SimpleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52E63B724F2536D009099B9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5BC979D24A9805B002D01B9 /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BC97A024A9805B002D01B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5BC97A224A9805B002D01B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				B5BC97D024A9839F002D01B9 /* GoogleService-Info.plist */,
 				B5BC97AE24A9805C002D01B9 /* Info.plist */,
 				B5F079E324E969CC004BCAD6 /* SignUpViewController.swift */,
+				B52E63B724F2536D009099B9 /* MainViewController.swift */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				B5BC97A124A9805B002D01B9 /* AppDelegate.swift in Sources */,
 				B5F079E424E969CC004BCAD6 /* SignUpViewController.swift in Sources */,
 				B5BC97A324A9805B002D01B9 /* SceneDelegate.swift in Sources */,
+				B52E63B824F2536D009099B9 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
