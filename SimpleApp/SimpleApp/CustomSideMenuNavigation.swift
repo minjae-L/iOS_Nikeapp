@@ -1,22 +1,23 @@
 //
-//  MainViewController.swift
+//  MainSideMenuViewController.swift
 //  SimpleApp
 //
-//  Created by 이민재 on 23/08/2020.
-//  Copyright © 2020 이민재. All rights reserved.
+//  Created by 이민재 on 13/04/2021.
+//  Copyright © 2021 이민재. All rights reserved.
 //
 
 import UIKit
+import SideMenu
 
-class MainViewController: UIViewController {
+class CustomSideMenuNavigation: SideMenuNavigationController {
 
-    @IBOutlet weak var searchView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.menuWidth = self.view.frame.width * 0.7
+        self.presentationStyle = .menuSlideIn
+        self.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }
-    
     
 
     /*
